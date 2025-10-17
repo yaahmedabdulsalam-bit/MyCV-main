@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Education</title>
+    <meta name="description" content="My Skills and Education">
+    <meta name="author" content="Albright Edet">
+    <link rel="stylesheet" href="styles/cv.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/profile-logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="work_experience.html">Work Experience</a></li>
+                <li><a href="skills_education.html">Skills & Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="inner-hero">
+            <h1>Skills &amp; Education</h1>
+        </div>
+    </header>
+    <main class="container1">
+        <aside class="left-column">
+            <h2>Skill Set</h2>
+            <img src="images/profile.jpg" alt="Profile Image">
+            <div class="skills">
+                <ul>
+                    <li>Business Development & Strategic Partnerships</li>
+<li>Defence & Security Solutions Design</li>
+<li>Proposal & Bid Writing for Government Contracts</li>
+<li>Client Relations & Stakeholder Management</li>
+<li>Project Planning, Execution & Reporting</li>
+<li>Armoured Vehicle & Ballistic Equipment Supply</li>
+<li>Technical & Commercial Documentation</li>
+<li>Market Intelligence & Opportunity Analysis</li>
+<li>Negotiation & Contract Management</li>
+<li>Strategic Sales & Pipeline Development</li>
+<li>Cross-functional Team Coordination</li>
+<li>Public Sector Engagement (MOD, NPA, LSSTF, NCoS, etc.)</li>
+<li>Vendor Registration & Compliance Documenta
+
+                </ul>
+            </div>
+            
+        </aside>
+        <div class="skillset-card">
+            <h2>Project Gallery</h2>
+            <div class="skillset-carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/dicovent.png" alt="DICOVENT ventilator project"/>
+                        <img src="images/uav2.png" alt="Custom built UAV"/>
+                        <img src="images/p1.jpg" alt="Electronics project board"/>
+                        <img src="images/p1.jpg" alt="Another electronics project board"/>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG2.jpg" alt="Project setup image"/>
+                        <img src="images/p1.jpg" alt="Project board detail"/>
+                        <img src="images/p1.jpg" alt="Assembled project"/>
+                        <img src="images/p1.jpg" alt="Final product showcase"/>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG2.jpg" alt="Project setup image"/>
+                        <img src="images/p1.jpg" alt="Project board detail"/>
+                        <img src="images/p1.jpg" alt="Assembled project"/>
+                        <img src="images/p1.jpg" alt="Final product showcase"/>
+                    </div>
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+            <div class="video-section">
+                <h2>Video Log</h2>
+                <div class="video-container">
+                    <!-- Replace the src below with your YouTube video's embed link -->
+                    <iframe src="https://www.youtube.com/embed/3kIiFq-mzaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-section">
+                <div class="video-container">
+                    <!-- Replace the src below with your YouTube video's embed link -->
+                    <iframe src="https://www.youtube.com/embed/CIru3dUJu7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <aside class="left-column">
+            <h2>Education</h2>
+            <img src="images/profile.jpg" alt="Profile Image">
+            <div>
+                <p><strong>MSc Mechatronics Engineering – Ahmadu Bello University</strong></p>
+                <p><strong>PGD Mechanical Engineering – Ahmadu Bello University</strong></p>
+                <p><strong>BSc Petroleum Engineering – University of Port Harcourt</strong></p>
+            </div>
+            <a href="contact.html" class="cta-button">Contact me</a>
+            </aside>
+    </main>
+    <footer>
+        <div class="footer-content">
+          <span>My Profile © 2025 - Albright A. Edet</span>
+          <a href="site-plan.html">Site Plan</a>
+          <a href="contact.html">Contact Me</a>
+          <div class="social">
+            <a href="https://linkedin.com/in/albright-edet-69133a146"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://wa.me/2348030404312"><img src="images/whatsapp.png" alt="Chat on Whatsapp"></a>
+            <a href="https://x.com/IamAlbright?t=VhI4wEwYkN7M40x_IvgB-Q&s=09"><img src="images/X.png" alt="Twitter"></a>
+          </div>
+        </div>
+    </footer>
+    <script>
+      // Script for skillset carousel
+      const carousel = document.querySelector('.skillset-carousel');
+      if (carousel) {
+        const wrapper = carousel.querySelector('.carousel-wrapper');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.prev');
+        const nextBtn = carousel.querySelector('.next');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function goToSlide(index) {
+          if (index < 0) {
+            index = totalSlides - 1;
+          } else if (index >= totalSlides) {
+            index = 0;
+          }
+          wrapper.style.transform = `translateX(-${index * 100}%)`;
+          currentIndex = index;
+        }
+
+        nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile CV</title>
+    <meta name="description" content="My Personal Profile">
+    <meta name="author" content="Albright Edet">
+    <link rel="stylesheet" href="styles/cv.css">
+   </head>
+<body>
+    <header>
+        <h1>My Professional Profile</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Profile</a>
+        <a href="work_experience.html">Work Experience</a>
+        <a href="skills_education.html">Skills & Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Wrapper for content and video -->
+    <div class="container">
+        <aside class="left-column">
+            <div>
+            <h2>Albright Abu Edet</h2>
+            <img src="images/profile.jpg" alt="Profile Image">
+            <p class="headline">Mechatronic Engineer || Product Design & Development || Embedded Systems || Research & Development || Machine Vision || TRNSYS Simulation || Technical Documentation and Research Writing</p>
+            <p>I am a dedicated Mechatronic Engineer with extensive experience in rapid prototyping, product design and development...</p>
+            <a href="work_experience.html" class="cta-button">Explore my Work Experience</a>
+            </div>
+        </aside>
+
+      <!-- Slideshow Section (right side) -->
+      <div class="right-column">
+      <div class="grid-container">
+        <div class="grid-items"><img src="images/IMG2.jpg" alt="Slide 1"/></div>
+        <div class="grid-items"><img src="images/profile.jpg" alt="Slide 2"/></div>
+        <div class="grid-items"> <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Falbright.edet%2Fvideos%2F10157092308823263%2F&show_text=false&width=560&t=0" width="100%" height="315" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></div>
+
+        <!-- Video Section -->
+<div class="grid-items"><iframe width="100%" height="315" src="https://www.youtube.com/embed/3kIiFq-mzaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen"></iframe></div>
+        <div class="grid-items"><iframe width="100%" height="315" src="https://www.youtube.com/embed/CIru3dUJu7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen"></iframe></div>
+        <div class="grid-items"><iframe width="100%" height="315" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Falbright.edet%2Fvideos%2F10157103619103263%2F&show_text=false&width=560&t=0" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allow="FullScreen"></iframe></div>
+      </div>
+      </div>
+</div>
+<section>
+<nav class="social-links">
+    <a href="https://linkedin.com/in/albright-edet-69133a146"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    <a href="https://wa.me/2348030404312"><img src="images/whatsapp.png" alt="Chat on Whatsapp"></a>
+    <a href="https://x.com/IamAlbright?t=VhI4wEwYkN7M40x_IvgB-Q&s=09"><img src="images/X.png" alt="Twitter"></a>
+   </nav>
+</section>
+       <!-- Video section end-->    
+    <footer>
+        <p>&copy; 2024 My Personal Profile</p>
+    </footer>
+    <script src="slideshow.js"></script>
+</body>
+</html>

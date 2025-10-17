@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="styles/cv.css">
+</head>
+<body class="home-page">
+  <header>
+    <nav class="navbar">
+      <img src="images/logo.svg" alt="Logo" class="logo">
+      <ul>
+        <li><a href="index.html">Profile</a></li>
+        <li><a href="work_experience.html">Work Experience</a></li>
+        <li><a href="skills_education.html">Skills & Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Welcome to My Profile</h1>
+      <p>Innovative Leader in Security Solutions | Strategic Visionary |  Aspiring Public Servant</p>
+      <button onclick="window.location.href='contact.html'">Contact Me</button>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
+  <main>
+    <section class="features">
+      <a href="#about-me-section" class="feature-link">
+        <div class="feature">
+          <img src="images/profile.jpg" alt="A profile picture of Albright Edet">
+          <div class="icon-label">
+            <img src="images/about-icon.svg" alt="About Icon">
+            <span>About Me</span>
+          </div>
+        </div>
+      </a>
+      <a href="skills_education.html" class="feature-link">
+        <div class="feature">
+          <img src="images/dc.jpg" alt="A project from Defence Industry Corporation of Nigeria">
+          <div class="icon-label">
+           <img src="images/skills-icon.svg" alt="Skills Icon">
+            <span>Skills</span>
+          </div>
+        </div>
+      </a>
+      <a href="work_experience.html" class="feature-link">
+        <div class="feature">
+          <img src="images/dicovent.png" alt="A project from Embeddet Systems">
+          <div class="icon-label">
+            <img src="images/projects-icon.svg" alt="Projects Icon">
+            <span>Projects</span>
+          </div>
+        </div>
+      </a>
+    </section>
+    <section class="highlight" id="about-me-section">
+      <img src="images/uav2.png" alt="Highlight">
+      <div class="highlight-text">
+        <h2>More About Me</h2>
+        <p>
+           a security and defence solutions expert with extensive experience in business development, security technology, and critical infrastructure protection. I currently serve as the Business Development Manager at Equipment & Protective Applications International Ltd (EPAIL), where I have played a key role in driving strategic partnerships, executing high-value defence contracts, and delivering advanced security solutions to government agencies and private sector organizations.
+        <button onclick="window.location.href='work_experience.html'">See My Work</button>
+      </div>
+    </section>
+    <section class="visit-info">
+      <p id="last-visited"></p>
+      <p id="visitor-count"></p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <span>My Profile © 2025 - Abdulsalam Pelumi Ahmed</span>
+      <a href="site-plan.html">Site Plan</a>
+      <a href="contact.html">Contact Me</a>
+      <div class="social">
+        <a href="https://linkedin.com/in/albright-edet-69133a146"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    <a href="https://wa.me/2348030404312"><img src="images/whatsapp.png" alt="Chat on Whatsapp"></a>
+    <a href="https://x.com/IamAlbright?t=VhI4wEwYkN7M40x_IvgB-Q&s=09"><img src="images/X.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Function to fetch and update a persistent, server-side visitor count
+    async function updateVisitorCount() {
+      try {
+        // IMPORTANT: Replace with your actual serverless function URL
+        const response = await fetch('https://your-function-url.example.com/api/visitor-count', {
+          method: 'POST' // Using POST to signify we are incrementing the count
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        document.getElementById('visitor-count').textContent = `Total site visits: ${data.count}`;
+      } catch (error) {
+        console.error('Failed to fetch visitor count:', error);
+        // Hide the element if the count fails to load
+        document.getElementById('visitor-count').style.display = 'none';
+      }
+    }
+
+    // Last visited (localStorage is perfect for this, as it's specific to the user's browser)
+    const lastVisited = localStorage.getItem('lastVisited');
+    if (lastVisited) {
+      document.getElementById('last-visited').textContent = `Your last visit: ${lastVisited}`;
+    } else {
+      document.getElementById('last-visited').textContent = "Welcome! This is your first visit.";
+    }
+    const now = new Date();
+    localStorage.setItem('lastVisited', now.toLocaleString());
+
+    // Fetch the persistent count when the page loads
+    updateVisitorCount();
+  </script>
+</body>
+</html>
